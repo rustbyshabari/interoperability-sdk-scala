@@ -1,4 +1,4 @@
-# BHILANI Interoperability by kantini, chanchali
+# BHILANI Interop SDK Suite by kantini, chanchali
 
 Run SDK
 
@@ -166,4 +166,4 @@ Second time
 Third time
 <img width="922" height="440" alt="scala3" src="https://github.com/user-attachments/assets/68b674c7-2ffc-455e-999f-90347a4ae4ac" />
 
-**@AIAmitSuri, Co-creator/Co-founder (🙏 Mata Shabri 🙏)**
+**🙏 Mata Shabri 🙏**
