@@ -1,4 +1,4 @@
-# BHILANI Interop SDK Suite by kantini, chanchali
+Welcome to **BHILANI**, an **Agentic Interop SDK Suite** by **Kantini, Chanchali**
 
 Run SDK
 
@@ -15,27 +15,28 @@ Basic Usage
     import scala.util.Try
     import upickle.default.*
     
+    @native def fetchInteroperability(url: String, paramsJson: String): String
+    
     @main def runScala(): Unit =
-      val sdk = JVMSDKit()
-      
-      // 1. Handle multiple parameters using a Map
+      System.loadLibrary("interoperability_wrapper_robusta")
+    
       val paramsMap = Map(
-        "page" -> "2"
+        "language"       -> null,
+        "integration"    -> null,
+        "crates"         -> null,
+        "developmentkit" -> null,
+        "page"           -> "1",
+        "ids"            -> null
       )
       
-      // Convert Map to JSON string automatically
       val paramsJson = write(paramsMap)
     
-      println("--- Bhilani Interop SDK (Scala) ---")
+      println("--- Scala SDK ---")
     
-      Try(sdk.fetchInteroperability("", paramsJson)).fold(
+      Try(fetchInteroperability("", paramsJson)).fold(
         e => println(s"Error: ${e.getMessage}"),
         res => println(res)
       )
-    
-    class JVMSDKit:
-      @native def fetchInteroperability(url: String, paramsJson: String): String
-      System.loadLibrary("interoperability_wrapper_robusta")
       
 Dynamic Usage
 
